@@ -3,20 +3,24 @@
 #include <stdio.h>
 
 /**
- * main - prints numbers between 0 to 9 with commas and spaces.
+ * main - Entrt point
  *
- * Return: ALways 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+	int d;
 
-	for (i = 48; i < 58; i++)
-		putchar(i);
-	if (i != 57)
-		putchar(',');
-		putchar(' ');
+	for (d = '0'; d <= '9'; d++)
+	{
+		putchar(d);
+		if (d != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
+
 	return (0);
 }
-
