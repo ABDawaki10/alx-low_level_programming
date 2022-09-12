@@ -1,9 +1,10 @@
 #include <stdio>
 
 /**
- * main - prints all possible combinations of two two-digit numbers
- * Return: Always 0 (Success)
- */
+ * main - prints all possibilities of two digits
+ * Return: 0 if (successful)
+*/
+
 int main(void)
 {
 	int i, j;
@@ -25,7 +26,6 @@ int main(void)
 					putchar(' ');
 				}
 			}
-
 		}
 	}
 	putchar('\n');
