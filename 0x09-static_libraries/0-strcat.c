@@ -2,32 +2,29 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: first string
- * @src: second string
- * Return: destination string with null byte
+ * @dest: string to append to
+ * @src: string to add
+ *
+ * Return: a pointer to the resulting string
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, len, len1;
+	int i, j;
 
-	len = 0;
+	i = 0;
+	j = 0;
 
-	while (dest[len] != '\0')
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
 	{
-		len++;
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
 
-	len1 = 0;
-
-	while (src[len1] != '\0')
-	{
-		len1++;
-	}
-
-	for (i = 0; i <= len1; i++)
-	{
-		dest[len + i] = src[i];
-	}
+	dest[i] = '\0';
 
 	return (dest);
 }
